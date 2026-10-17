@@ -1,0 +1,54 @@
+/* Tailwind CSS base styles */
+@tailwind base;
+
+/* Tailwind CSS components */
+@tailwind components;
+
+/* Tailwind CSS utilities */
+@tailwind utilities;
+
+/* Custom styles */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.25% 53.32%;
+  --primary-foreground: 222.2 47.4% 95.09%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 9.1%;
+  --muted: 215 20.2% 65.1%;
+  --muted-foreground: 215 16.1% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 9.1%;
+  --destructive: 0 84.6% 60.2%;
+  --destructive-foreground: 210 40% 98.0%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.25% 53.32%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98.0%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98.0%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98.0%;
+  --primary: 221.2 83.25% 53.32%;
+  --primary-foreground: 222.2 47.4% 95.09%;
+  --secondary: 215 27.9% 16.9%;
+  --secondary-foreground: 210 40% 98.0%;
+  --muted: 215 27.9% 16.9%;
+  --muted-foreground: 215 16.1% 46.9%;
+  --accent: 215 27.9% 16.9%;
+  --accent-foreground: 210 40% 98.0%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98.0%;
+  --border: 215 27.9% 16.9%;
+  --input: 215 27.9% 16.9%;
+  --ring: 221.2 83.25% 53.32%;
+}

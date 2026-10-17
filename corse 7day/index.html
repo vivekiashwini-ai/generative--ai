@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d39">
+  <title>Mira | Personal Chat</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Conversation profile">
+      <a class="brand" href="/" aria-label="Mira home">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>Mira<span class="brand-period">.</span></span>
+      </a>
+
+      <div class="sidebar-rule"></div>
+      <p class="eyebrow">YOUR SPACE</p>
+      <div class="profile-card">
+        <div class="avatar" id="profile-avatar" aria-hidden="true">F</div>
+        <div class="profile-copy">
+          <span class="profile-name" id="profile-name">Friend</span>
+          <span class="profile-detail" id="profile-detail">Getting to know you</span>
+        </div>
+      </div>
+      <button class="text-button preferences-button" id="open-profile" type="button">
+        <span aria-hidden="true">&#9881;</span> Preferences
+      </button>
+
+      <div class="sidebar-note">
+        <span class="note-mark" aria-hidden="true"></span>
+        <p>Your conversations stay in this browser session.</p>
+      </div>
+      <div class="sidebar-bottom">
+        <span class="status-dot" id="status-dot" aria-hidden="true"></span>
+        <span id="connection-status" role="status">Checking connection</span>
+      </div>
+    </aside>
+
+    <main class="chat-panel">
+      <header class="chat-header">
+        <div>
+          <p class="eyebrow">PERSONAL CHAT</p>
+          <h1>A little more human.</h1>
+        </div>
+        <button class="quiet-button" id="clear-chat" type="button" title="Clear this conversation">Clear chat</button>
+      </header>
+
+      <section class="conversation" id="conversation" aria-label="Chat messages" aria-live="polite">
+        <div class="day-divider"><span>Today</span></div>
+        <article class="message assistant-message">
+          <div class="message-avatar" aria-hidden="true">M</div>
+          <div class="message-body">
+            <div class="message-meta"><strong>Mira</strong><time>Just now</time></div>
+            <div class="bubble" id="welcome-message">Hi, friend. What would you like to talk about?</div>
+          </div>
+        </article>
+      </section>
+
+      <form class="composer" id="chat-form">
+        <label class="sr-only" for="message-input">Your message</label>
+        <textarea id="message-input" name="message" rows="1" maxlength="4000" placeholder="Write what's on your mind..." required></textarea>
+        <div class="composer-footer">
+          <span class="composer-hint">Enter to send <span aria-hidden="true">&middot;</span> Shift + Enter for a new line</span>
+          <button class="send-button" id="send-button" type="submit">
+            <span>Send</span><span class="send-arrow" aria-hidden="true">&#8599;</span>
+          </button>
+        </div>
+      </form>
+      <p class="privacy-note">Emotion is an estimate, not a diagnosis.</p>
+    </main>
+  </div>
+
+  <dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-title">
+    <form id="profile-form" method="dialog">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">MAKE IT YOURS</p>
+          <h2 id="profile-title">Your preferences</h2>
+        </div>
+        <button class="close-button" type="button" id="close-profile" aria-label="Close preferences">&times;</button>
+      </div>
+      <label>Name<input name="name" maxlength="80" autocomplete="name"></label>
+      <label>Interests<input name="interests" maxlength="160" placeholder="Music, science, design..."></label>
+      <label>Experience level<input name="experience" maxlength="120" placeholder="New to the topic, experienced..."></label>
+      <label>Reply style<input name="style" maxlength="120" placeholder="Warm and concise, detailed..."></label>
+      <div class="dialog-actions">
+        <button class="quiet-button" type="button" id="cancel-profile">Cancel</button>
+        <button class="send-button" type="submit">Save preferences</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
